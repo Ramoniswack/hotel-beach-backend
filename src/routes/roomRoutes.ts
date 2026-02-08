@@ -1,10 +1,11 @@
 import express from 'express';
 import Room from '../models/Room';
 import Booking from '../models/Booking';
+import { authenticate, isAdmin } from '../middleware/auth';
 
 const router = express.Router();
 
-// GET /api/rooms - Fetch all available rooms
+// GET /api/rooms - Fetch all available rooms (public)
 router.get('/', async (req, res) => {
   try {
     const rooms = await Room.find({ isAvailable: true }).sort({ price: 1 });
@@ -22,7 +23,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /api/rooms/available - Fetch rooms available for specific date range
+// GET /api/rooms/available - Fetch rooms available for specific date range (public)
 router.get('/available', async (req, res) => {
   try {
     const { checkIn, checkOut } = req.query;
@@ -98,7 +99,7 @@ router.get('/available', async (req, res) => {
   }
 });
 
-// GET /api/rooms/:id - Fetch single room by ID/slug
+// GET /api/rooms/:id - Fetch single room by ID/slug (public)
 router.get('/:id', async (req, res) => {
   try {
     const room = await Room.findOne({ id: req.params.id });
@@ -123,8 +124,8 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// POST /api/rooms - Create new room (admin)
-router.post('/', async (req, res) => {
+// POST /api/rooms - Create new room (admin only)
+router.post('/', authenticate, isAdmin, async (req, res) => {
   try {
     const room = new Room(req.body);
     await room.save();
@@ -142,8 +143,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// PUT /api/rooms/:id - Update room (admin)
-router.put('/:id', async (req, res) => {
+// PUT /api/rooms/:id - Update room (admin only)
+router.put('/:id', authenticate, isAdmin, async (req, res) => {
   try {
     const room = await Room.findOneAndUpdate(
       { id: req.params.id },
@@ -172,8 +173,8 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// DELETE /api/rooms/:id - Delete room (admin)
-router.delete('/:id', async (req, res) => {
+// DELETE /api/rooms/:id - Delete room (admin only)
+router.delete('/:id', authenticate, isAdmin, async (req, res) => {
   try {
     const room = await Room.findOneAndDelete({ id: req.params.id });
     

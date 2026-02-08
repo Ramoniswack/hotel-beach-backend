@@ -1,10 +1,11 @@
 import express from 'express';
 import Booking from '../models/Booking';
 import Room from '../models/Room';
+import { authenticate, isGuest, isStaff, AuthRequest } from '../middleware/auth';
 
 const router = express.Router();
 
-// POST /api/bookings/check-availability - Check room availability
+// POST /api/bookings/check-availability - Check room availability (public)
 router.post('/check-availability', async (req, res) => {
   try {
     const { roomId, checkInDate, checkOutDate } = req.body;
@@ -96,8 +97,8 @@ router.post('/check-availability', async (req, res) => {
   }
 });
 
-// POST /api/bookings - Create new booking with robust validation
-router.post('/', async (req, res) => {
+// POST /api/bookings - Create new booking (authenticated guests)
+router.post('/', authenticate, isGuest, async (req: AuthRequest, res) => {
   try {
     const { roomId, checkInDate, checkOutDate, adults, children, guestInfo } = req.body;
 
@@ -253,8 +254,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET /api/bookings - Get all bookings (admin)
-router.get('/', async (req, res) => {
+// GET /api/bookings - Get all bookings (staff and admin only)
+router.get('/', authenticate, isStaff, async (req, res) => {
   try {
     const bookings = await Booking.find().sort({ createdAt: -1 });
     res.json({
@@ -271,8 +272,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /api/bookings/user/:email - Get bookings by guest email
-router.get('/user/:email', async (req, res) => {
+// GET /api/bookings/user/:email - Get bookings by guest email (authenticated)
+router.get('/user/:email', authenticate, async (req: AuthRequest, res) => {
   try {
     const email = req.params.email.toLowerCase().trim();
 
@@ -304,8 +305,8 @@ router.get('/user/:email', async (req, res) => {
   }
 });
 
-// GET /api/bookings/:id - Get booking by ID
-router.get('/:id', async (req, res) => {
+// GET /api/bookings/:id - Get booking by ID (authenticated)
+router.get('/:id', authenticate, async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
     
@@ -329,8 +330,8 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// PATCH /api/bookings/:id/status - Update booking status
-router.patch('/:id/status', async (req, res) => {
+// PATCH /api/bookings/:id/status - Update booking status (staff and admin only)
+router.patch('/:id/status', authenticate, isStaff, async (req, res) => {
   try {
     const { status } = req.body;
 
@@ -375,8 +376,8 @@ router.patch('/:id/status', async (req, res) => {
   }
 });
 
-// DELETE /api/bookings/:id - Cancel booking
-router.delete('/:id', async (req, res) => {
+// DELETE /api/bookings/:id - Cancel booking (authenticated users can cancel their own)
+router.delete('/:id', authenticate, async (req: AuthRequest, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
 

@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/database';
 import roomRoutes from './routes/roomRoutes';
 import bookingRoutes from './routes/bookingRoutes';
+import authRoutes from './routes/authRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 // Routes
+app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/bookings', bookingRoutes);
 
