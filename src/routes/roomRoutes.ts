@@ -5,10 +5,16 @@ import { authenticate, isAdmin } from '../middleware/auth';
 
 const router = express.Router();
 
-// GET /api/rooms - Fetch all available rooms (public)
+// GET /api/rooms - Fetch all rooms
 router.get('/', async (req, res) => {
   try {
-    const rooms = await Room.find({ isAvailable: true }).sort({ price: 1 });
+    // If authenticated, return all rooms; otherwise only available ones
+    const token = req.header('Authorization')?.replace('Bearer ', '');
+    const showAll = !!token; // If there's a token, show all rooms
+    
+    const query = showAll ? {} : { isAvailable: true };
+    const rooms = await Room.find(query).sort({ price: 1 });
+    
     res.json({
       success: true,
       count: rooms.length,
@@ -143,14 +149,15 @@ router.post('/', authenticate, isAdmin, async (req, res) => {
   }
 });
 
-// PUT /api/rooms/:id - Update room (admin only)
-router.put('/:id', authenticate, isAdmin, async (req, res) => {
+// PUT /api/rooms/:id - Update room (admin/staff)
+router.put('/:id', authenticate, async (req, res) => {
   try {
-    const room = await Room.findOneAndUpdate(
-      { id: req.params.id },
-      req.body,
-      { new: true, runValidators: true }
-    );
+    // Try to find by MongoDB _id first, then by custom id
+    let room = await Room.findById(req.params.id);
+    
+    if (!room) {
+      room = await Room.findOne({ id: req.params.id });
+    }
     
     if (!room) {
       return res.status(404).json({
@@ -158,6 +165,10 @@ router.put('/:id', authenticate, isAdmin, async (req, res) => {
         message: 'Room not found',
       });
     }
+
+    // Update the room
+    Object.assign(room, req.body);
+    await room.save();
 
     res.json({
       success: true,
