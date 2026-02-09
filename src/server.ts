@@ -16,6 +16,10 @@ dotenv.config();
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
 
+// Configure Cloudinary after env is loaded
+import { configureCloudinary } from './config/cloudinary';
+configureCloudinary();
+
 // Middleware
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',

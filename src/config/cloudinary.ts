@@ -2,10 +2,27 @@ import { v2 as cloudinary } from 'cloudinary';
 import { CloudinaryStorage } from 'multer-storage-cloudinary';
 import multer from 'multer';
 
-// Configure Cloudinary
-cloudinary.config({
-  cloudinary_url: process.env.CLOUDINARY_URL
-});
+// Function to configure Cloudinary (called after env is loaded)
+export const configureCloudinary = () => {
+  const cloudinaryUrl = process.env.CLOUDINARY_URL || '';
+  const urlMatch = cloudinaryUrl.match(/cloudinary:\/\/([^:]+):([^@]+)@(.+)/);
+
+  if (!urlMatch) {
+    console.error('Invalid CLOUDINARY_URL format. Expected: cloudinary://api_key:api_secret@cloud_name');
+    console.error('Received:', cloudinaryUrl);
+    return false;
+  }
+
+  cloudinary.config({
+    cloud_name: urlMatch[3],
+    api_key: urlMatch[1],
+    api_secret: urlMatch[2],
+    secure: true
+  });
+
+  console.log('✓ Cloudinary configured with cloud:', urlMatch[3]);
+  return true;
+};
 
 // Create storage engine for multer
 const storage = new CloudinaryStorage({
