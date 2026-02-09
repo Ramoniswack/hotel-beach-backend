@@ -26,11 +26,18 @@ export const getPostBySlug = async (req: Request, res: Response) => {
 
 export const createPost = async (req: Request, res: Response) => {
   try {
+    console.log('Creating post with data:', req.body);
     const post = new BlogPost(req.body);
     await post.save();
+    console.log('Post created successfully:', post._id);
     res.status(201).json(post);
-  } catch (error) {
-    res.status(500).json({ message: 'Error creating blog post', error });
+  } catch (error: any) {
+    console.error('Error creating blog post:', error);
+    res.status(500).json({ 
+      message: 'Error creating blog post', 
+      error: error.message,
+      details: error.errors 
+    });
   }
 };
 

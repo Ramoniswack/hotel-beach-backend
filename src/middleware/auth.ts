@@ -92,3 +92,6 @@ export const checkRole = (...allowedRoles: UserRole[]) => {
 export const isGuest = checkRole(UserRole.GUEST, UserRole.STAFF, UserRole.ADMIN);
 export const isStaff = checkRole(UserRole.STAFF, UserRole.ADMIN);
 export const isAdmin = checkRole(UserRole.ADMIN);
+
+// Alias for checkRole to match common naming convention
+export const authorize = (roles: UserRole[]) => checkRole(...roles);
