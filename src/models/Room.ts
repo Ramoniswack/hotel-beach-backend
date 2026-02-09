@@ -17,6 +17,16 @@ export interface IRoom extends Document {
   amenities: string[];
   services: string[];
   isAvailable: boolean;
+  roomNumber?: string;
+  floor?: number;
+  cleaningStatus: 'clean' | 'dirty' | 'in-progress';
+  occupancyStatus: 'vacant' | 'occupied' | 'reserved';
+  seasonalPricing?: {
+    season: string;
+    startDate: Date;
+    endDate: Date;
+    price: number;
+  }[];
   createdAt: Date;
   updatedAt: Date;
 }
@@ -39,6 +49,24 @@ const RoomSchema: Schema = new Schema(
     amenities: [{ type: String }],
     services: [{ type: String }],
     isAvailable: { type: Boolean, default: true },
+    roomNumber: { type: String },
+    floor: { type: Number },
+    cleaningStatus: {
+      type: String,
+      enum: ['clean', 'dirty', 'in-progress'],
+      default: 'clean',
+    },
+    occupancyStatus: {
+      type: String,
+      enum: ['vacant', 'occupied', 'reserved'],
+      default: 'vacant',
+    },
+    seasonalPricing: [{
+      season: { type: String },
+      startDate: { type: Date },
+      endDate: { type: Date },
+      price: { type: Number },
+    }],
   },
   { timestamps: true }
 );

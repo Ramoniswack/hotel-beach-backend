@@ -8,9 +8,11 @@ const generateToken = (userId: string, email: string, role: UserRole): string =>
   const jwtSecret = process.env.JWT_SECRET || 'your-secret-key';
   const jwtExpire = process.env.JWT_EXPIRE || '7d';
 
-  return jwt.sign({ id: userId, email, role }, jwtSecret, {
-    expiresIn: jwtExpire,
-  });
+  return jwt.sign(
+    { id: userId, email, role }, 
+    jwtSecret, 
+    { expiresIn: jwtExpire } as jwt.SignOptions
+  );
 };
 
 // Register new user

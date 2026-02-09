@@ -7,6 +7,8 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
+    "seed:rooms": "ts-node src/scripts/seedRooms.ts",
+    "seed:admin": "ts-node src/scripts/seedAdmin.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

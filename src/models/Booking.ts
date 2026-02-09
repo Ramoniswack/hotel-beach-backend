@@ -13,7 +13,10 @@ export interface IBooking extends Document {
     email: string;
     phone: string;
   };
-  status: 'pending' | 'confirmed' | 'cancelled';
+  status: 'pending' | 'confirmed' | 'checked-in' | 'checked-out' | 'cancelled';
+  paymentStatus: 'pending' | 'paid' | 'refunded';
+  invoiceNumber?: string;
+  specialRequests?: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -34,11 +37,25 @@ const BookingSchema: Schema = new Schema(
     },
     status: {
       type: String,
-      enum: ['pending', 'confirmed', 'cancelled'],
+      enum: ['pending', 'confirmed', 'checked-in', 'checked-out', 'cancelled'],
       default: 'pending',
     },
+    paymentStatus: {
+      type: String,
+      enum: ['pending', 'paid', 'refunded'],
+      default: 'pending',
+    },
+    invoiceNumber: { type: String },
+    specialRequests: { type: String },
   },
   { timestamps: true }
 );
+
+// Generate invoice number before saving
+BookingSchema.pre('save', async function () {
+  if (!this.invoiceNumber) {
+    this.invoiceNumber = `INV-${Date.now()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
+  }
+});
 
 export default mongoose.model<IBooking>('Booking', BookingSchema);

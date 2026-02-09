@@ -275,7 +275,8 @@ router.get('/', authenticate, isStaff, async (req, res) => {
 // GET /api/bookings/user/:email - Get bookings by guest email (authenticated)
 router.get('/user/:email', authenticate, async (req: AuthRequest, res) => {
   try {
-    const email = req.params.email.toLowerCase().trim();
+    const emailParam = req.params.email;
+    const email = (typeof emailParam === 'string' ? emailParam : emailParam[0]).toLowerCase().trim();
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
