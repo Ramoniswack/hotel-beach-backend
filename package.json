@@ -14,6 +14,7 @@
     "seed:about": "ts-node src/scripts/seedAboutPageContent.ts",
     "seed:explore": "ts-node src/scripts/seedExplorePageContent.ts",
     "seed:contact": "ts-node src/scripts/seedContactPageContent.ts",
+    "seed:site-settings": "ts-node src/scripts/seedSiteSettings.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

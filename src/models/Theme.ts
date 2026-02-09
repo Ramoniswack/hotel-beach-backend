@@ -31,7 +31,7 @@ const PageContentSchema: Schema = new Schema(
       type: String, 
       required: true, 
       unique: true,
-      enum: ['home', 'about', 'rooms', 'blog', 'explore', 'contact']
+      enum: ['home', 'about', 'rooms', 'blog', 'explore', 'contact', 'site-settings']
     },
     sections: [{
       sectionId: { type: String, required: true },
