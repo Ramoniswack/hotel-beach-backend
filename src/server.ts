@@ -7,6 +7,7 @@ import bookingRoutes from './routes/bookingRoutes';
 import authRoutes from './routes/authRoutes';
 import themeRoutes from './routes/themeRoutes';
 import blogRoutes from './routes/blogRoutes';
+import uploadRoutes from './routes/uploadRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -32,6 +33,7 @@ app.use('/api/rooms', roomRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/content', themeRoutes);
 app.use('/api/blog', blogRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Health check
 app.get('/api/health', (req: Request, res: Response) => {
