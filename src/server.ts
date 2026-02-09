@@ -5,6 +5,7 @@ import connectDB from './config/database';
 import roomRoutes from './routes/roomRoutes';
 import bookingRoutes from './routes/bookingRoutes';
 import authRoutes from './routes/authRoutes';
+import themeRoutes from './routes/themeRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -28,6 +29,7 @@ connectDB();
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use('/api/content', themeRoutes);
 
 // Health check
 app.get('/api/health', (req: Request, res: Response) => {

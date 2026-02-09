@@ -9,6 +9,11 @@
     "start": "node dist/server.js",
     "seed:rooms": "ts-node src/scripts/seedRooms.ts",
     "seed:admin": "ts-node src/scripts/seedAdmin.ts",
+    "seed:home": "ts-node src/scripts/seedHomeContent.ts",
+    "seed:rooms-page": "ts-node src/scripts/seedRoomsPageContent.ts",
+    "seed:about": "ts-node src/scripts/seedAboutPageContent.ts",
+    "seed:explore": "ts-node src/scripts/seedExplorePageContent.ts",
+    "seed:contact": "ts-node src/scripts/seedContactPageContent.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
