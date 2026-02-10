@@ -9,6 +9,7 @@ export interface IPageContent extends Document {
     subtitle?: string;
     description?: string;
     content?: string;
+    heroImage?: string;
     images?: string[];
     buttonText?: string;
     buttonLink?: string;
@@ -40,6 +41,7 @@ const PageContentSchema: Schema = new Schema(
       subtitle: { type: String },
       description: { type: String },
       content: { type: String },
+      heroImage: { type: String },
       images: [{ type: String }],
       buttonText: { type: String },
       buttonLink: { type: String },

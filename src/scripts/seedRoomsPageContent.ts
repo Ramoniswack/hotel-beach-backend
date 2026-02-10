@@ -8,12 +8,21 @@ const roomsPageContent = {
   pageName: 'rooms',
   sections: [
     {
+      sectionId: 'retreat-hero',
+      sectionName: 'Retreat Hero Section',
+      title: 'Retreat Hotel at Santorini',
+      subtitle: 'Unwind the clock of modern life. Unlock the door to a wonder of the world.',
+      heroImage: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2670&auto=format&fit=crop',
+      isVisible: true,
+      order: 1
+    },
+    {
       sectionId: 'header',
       sectionName: 'Page Header',
       title: 'In harmony with nature',
       description: 'Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum.',
       isVisible: true,
-      order: 1
+      order: 2
     },
     {
       sectionId: 'rooms-showcase',
@@ -21,7 +30,7 @@ const roomsPageContent = {
       title: 'Our Rooms',
       description: 'Browse our collection of luxury accommodations',
       isVisible: true,
-      order: 2
+      order: 3
     },
     {
       sectionId: 'spa-section',
@@ -29,7 +38,7 @@ const roomsPageContent = {
       title: 'Spa & Wellness',
       description: 'Rejuvenate your body and mind',
       isVisible: true,
-      order: 3
+      order: 4
     },
     {
       sectionId: 'promotions',
@@ -54,7 +63,7 @@ const roomsPageContent = {
         }
       ],
       isVisible: true,
-      order: 4
+      order: 5
     }
   ],
   metadata: {
