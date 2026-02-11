@@ -159,9 +159,10 @@ export const login = async (req: Request, res: Response): Promise<void> => {
 };
 
 // Get current user profile
-export const getProfile = async (req: AuthRequest, res: Response): Promise<void> => {
+export const getProfile = async (req: Request, res: Response): Promise<void> => {
+  const authReq = req as AuthRequest;
   try {
-    if (!req.user) {
+    if (!authReq.user) {
       res.status(401).json({
         success: false,
         message: 'Not authenticated',
@@ -169,7 +170,7 @@ export const getProfile = async (req: AuthRequest, res: Response): Promise<void>
       return;
     }
 
-    const user = await User.findById(req.user.id);
+    const user = await User.findById(authReq.user.id);
     if (!user) {
       res.status(404).json({
         success: false,
@@ -200,9 +201,10 @@ export const getProfile = async (req: AuthRequest, res: Response): Promise<void>
 };
 
 // Update user profile
-export const updateProfile = async (req: AuthRequest, res: Response): Promise<void> => {
+export const updateProfile = async (req: Request, res: Response): Promise<void> => {
+  const authReq = req as AuthRequest;
   try {
-    if (!req.user) {
+    if (!authReq.user) {
       res.status(401).json({
         success: false,
         message: 'Not authenticated',
@@ -217,7 +219,7 @@ export const updateProfile = async (req: AuthRequest, res: Response): Promise<vo
     if (phone !== undefined) updates.phone = phone;
 
     const user = await User.findByIdAndUpdate(
-      req.user.id,
+      authReq.user.id,
       updates,
       { new: true, runValidators: true }
     );
@@ -251,9 +253,10 @@ export const updateProfile = async (req: AuthRequest, res: Response): Promise<vo
 };
 
 // Change password
-export const changePassword = async (req: AuthRequest, res: Response): Promise<void> => {
+export const changePassword = async (req: Request, res: Response): Promise<void> => {
+  const authReq = req as AuthRequest;
   try {
-    if (!req.user) {
+    if (!authReq.user) {
       res.status(401).json({
         success: false,
         message: 'Not authenticated',
@@ -279,7 +282,7 @@ export const changePassword = async (req: AuthRequest, res: Response): Promise<v
       return;
     }
 
-    const user = await User.findById(req.user.id).select('+password');
+    const user = await User.findById(authReq.user.id).select('+password');
     if (!user) {
       res.status(404).json({
         success: false,
@@ -316,7 +319,8 @@ export const changePassword = async (req: AuthRequest, res: Response): Promise<v
 };
 
 // Admin: Create staff or admin user
-export const createUser = async (req: AuthRequest, res: Response): Promise<void> => {
+export const createUser = async (req: Request, res: Response): Promise<void> => {
+  const authReq = req as AuthRequest;
   try {
     const { email, password, name, phone, role } = req.body;
 

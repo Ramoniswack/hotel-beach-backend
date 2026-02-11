@@ -13,7 +13,7 @@ export interface AuthRequest extends Request {
 
 // Verify JWT token
 export const authenticate = async (
-  req: AuthRequest,
+  req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> => {
@@ -48,7 +48,7 @@ export const authenticate = async (
     }
 
     // Attach user to request
-    req.user = {
+    (req as AuthRequest).user = {
       id: decoded.id,
       email: decoded.email,
       role: decoded.role,
@@ -66,8 +66,9 @@ export const authenticate = async (
 
 // Check if user has required role
 export const checkRole = (...allowedRoles: UserRole[]) => {
-  return (req: AuthRequest, res: Response, next: NextFunction): void => {
-    if (!req.user) {
+  return (req: Request, res: Response, next: NextFunction): void => {
+    const authReq = req as AuthRequest;
+    if (!authReq.user) {
       res.status(401).json({
         success: false,
         message: 'Authentication required',
@@ -75,11 +76,11 @@ export const checkRole = (...allowedRoles: UserRole[]) => {
       return;
     }
 
-    if (!allowedRoles.includes(req.user.role)) {
+    if (!allowedRoles.includes(authReq.user.role)) {
       res.status(403).json({
         success: false,
         message: `Access denied. Required role: ${allowedRoles.join(' or ')}`,
-        userRole: req.user.role,
+        userRole: authReq.user.role,
       });
       return;
     }

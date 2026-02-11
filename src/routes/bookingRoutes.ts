@@ -1,7 +1,7 @@
 import express from 'express';
 import Booking from '../models/Booking';
 import Room from '../models/Room';
-import { authenticate, isGuest, isStaff, AuthRequest } from '../middleware/auth';
+import { authenticate, isGuest, isStaff } from '../middleware/auth';
 
 const router = express.Router();
 
@@ -98,7 +98,7 @@ router.post('/check-availability', async (req, res) => {
 });
 
 // POST /api/bookings - Create new booking (authenticated guests)
-router.post('/', authenticate, isGuest, async (req: AuthRequest, res) => {
+router.post('/', authenticate, isGuest, async (req, res) => {
   try {
     const { roomId, checkInDate, checkOutDate, adults, children, guestInfo } = req.body;
 
@@ -273,7 +273,7 @@ router.get('/', authenticate, isStaff, async (req, res) => {
 });
 
 // GET /api/bookings/user/:email - Get bookings by guest email (authenticated)
-router.get('/user/:email', authenticate, async (req: AuthRequest, res) => {
+router.get('/user/:email', authenticate, async (req, res) => {
   try {
     const emailParam = req.params.email;
     const email = (typeof emailParam === 'string' ? emailParam : emailParam[0]).toLowerCase().trim();
@@ -378,7 +378,7 @@ router.patch('/:id/status', authenticate, isStaff, async (req, res) => {
 });
 
 // DELETE /api/bookings/:id - Cancel booking (authenticated users can cancel their own)
-router.delete('/:id', authenticate, async (req: AuthRequest, res) => {
+router.delete('/:id', authenticate, async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
 
