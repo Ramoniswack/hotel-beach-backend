@@ -441,3 +441,41 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
     });
   }
 };
+
+// Admin: Delete user
+export const deleteUser = async (req: Request, res: Response): Promise<void> => {
+  const authReq = req as AuthRequest;
+  try {
+    const { userId } = req.params;
+
+    // Prevent admin from deleting themselves
+    if (authReq.user && authReq.user.id === userId) {
+      res.status(400).json({
+        success: false,
+        message: 'You cannot delete your own account',
+      });
+      return;
+    }
+
+    const user = await User.findByIdAndDelete(userId);
+
+    if (!user) {
+      res.status(404).json({
+        success: false,
+        message: 'User not found',
+      });
+      return;
+    }
+
+    res.json({
+      success: true,
+      message: 'User deleted successfully',
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: 'Error deleting user',
+      error: error instanceof Error ? error.message : 'Unknown error',
+    });
+  }
+};

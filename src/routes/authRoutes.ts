@@ -8,6 +8,7 @@ import {
   createUser,
   getAllUsers,
   updateUser,
+  deleteUser,
 } from '../controllers/authController';
 import { authenticate, isAdmin } from '../middleware/auth';
 
@@ -26,5 +27,6 @@ router.post('/change-password', authenticate, changePassword);
 router.post('/users', authenticate, isAdmin, createUser);
 router.get('/users', authenticate, isAdmin, getAllUsers);
 router.put('/users/:userId', authenticate, isAdmin, updateUser);
+router.delete('/users/:userId', authenticate, isAdmin, deleteUser);
 
 export default router;
