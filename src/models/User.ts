@@ -7,6 +7,14 @@ export enum UserRole {
   ADMIN = 'admin',
 }
 
+export interface IBillingInfo {
+  country?: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  postcode?: string;
+}
+
 export interface IUser extends Document {
   email: string;
   password?: string;
@@ -17,6 +25,7 @@ export interface IUser extends Document {
   googleId?: string;
   avatar?: string;
   authProvider: 'local' | 'google';
+  billingInfo?: IBillingInfo;
   createdAt: Date;
   updatedAt: Date;
   comparePassword(candidatePassword: string): Promise<boolean>;
@@ -70,6 +79,13 @@ const UserSchema: Schema = new Schema(
       type: String,
       enum: ['local', 'google'],
       default: 'local',
+    },
+    billingInfo: {
+      country: { type: String },
+      address: { type: String },
+      city: { type: String },
+      state: { type: String },
+      postcode: { type: String },
     },
   },
   {

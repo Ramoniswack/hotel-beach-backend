@@ -188,6 +188,7 @@ export const getProfile = async (req: Request, res: Response): Promise<void> => 
         phone: user.phone,
         role: user.role,
         isActive: user.isActive,
+        billingInfo: user.billingInfo,
         createdAt: user.createdAt,
       },
     });
@@ -212,11 +213,12 @@ export const updateProfile = async (req: Request, res: Response): Promise<void> 
       return;
     }
 
-    const { name, phone } = req.body;
+    const { name, phone, billingInfo } = req.body;
     const updates: any = {};
 
     if (name) updates.name = name;
     if (phone !== undefined) updates.phone = phone;
+    if (billingInfo) updates.billingInfo = billingInfo;
 
     const user = await User.findByIdAndUpdate(
       authReq.user.id,
@@ -241,6 +243,7 @@ export const updateProfile = async (req: Request, res: Response): Promise<void> 
         name: user.name,
         phone: user.phone,
         role: user.role,
+        billingInfo: user.billingInfo,
       },
     });
   } catch (error) {
