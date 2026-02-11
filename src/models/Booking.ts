@@ -13,6 +13,11 @@ export interface IBooking extends Document {
     email: string;
     phone: string;
   };
+  additionalServices?: Array<{
+    name: string;
+    price: number;
+    quantity?: number;
+  }>;
   status: 'pending' | 'confirmed' | 'checked-in' | 'checked-out' | 'cancelled';
   paymentStatus: 'pending' | 'paid' | 'refunded';
   invoiceNumber?: string;
@@ -35,6 +40,11 @@ const BookingSchema: Schema = new Schema(
       email: { type: String, required: true },
       phone: { type: String, required: true },
     },
+    additionalServices: [{
+      name: { type: String },
+      price: { type: Number },
+      quantity: { type: Number, default: 1 },
+    }],
     status: {
       type: String,
       enum: ['pending', 'confirmed', 'checked-in', 'checked-out', 'cancelled'],
