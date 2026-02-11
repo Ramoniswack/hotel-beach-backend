@@ -18,6 +18,20 @@ const bookingSettingsData = {
       order: 1
     },
     {
+      sectionId: 'additional-services',
+      sectionName: 'Additional Services',
+      title: 'Choose Additional Services',
+      items: [
+        { name: 'Free-to-use smartphone', price: 0, priceLabel: 'Free', type: 'checkbox' },
+        { name: 'Safe-deposit box', price: 0, priceLabel: 'Free', type: 'checkbox' },
+        { name: 'Luggage storage', price: 0, priceLabel: 'Free', type: 'checkbox' },
+        { name: 'Childcare', price: 60, priceLabel: '$60 / Once', type: 'checkbox' },
+        { name: 'Massage', price: 15, priceLabel: '$15 / Once', type: 'guests', guestsLabel: 'for' }
+      ],
+      isVisible: true,
+      order: 2
+    },
+    {
       sectionId: 'policies',
       sectionName: 'Booking Policies',
       items: [
@@ -31,7 +45,7 @@ const bookingSettingsData = {
         }
       ],
       isVisible: true,
-      order: 2
+      order: 3
     },
     {
       sectionId: 'sidebar-contact',
@@ -43,7 +57,7 @@ const bookingSettingsData = {
         { label: 'Email', value: 'reservations@hoteliercity.com' }
       ],
       isVisible: true,
-      order: 3
+      order: 4
     },
     {
       sectionId: 'sidebar-address',
@@ -58,7 +72,7 @@ const bookingSettingsData = {
         { label: 'Email', value: 'reservations@hotelbeach.com' }
       ],
       isVisible: true,
-      order: 4
+      order: 5
     }
   ],
   metadata: {
