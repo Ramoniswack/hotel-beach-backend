@@ -8,6 +8,7 @@ export interface AuthRequest extends Request {
     id: string;
     email: string;
     role: UserRole;
+    name?: string;
   };
 }
 
@@ -96,3 +97,39 @@ export const isAdmin = checkRole(UserRole.ADMIN);
 
 // Alias for checkRole to match common naming convention
 export const authorize = (roles: UserRole[]) => checkRole(...roles);
+
+// Optional authentication - doesn't fail if no token provided
+export const optionalAuth = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  try {
+    const token = req.header('Authorization')?.replace('Bearer ', '');
+
+    if (token) {
+      const jwtSecret = process.env.JWT_SECRET || 'your-secret-key';
+      const decoded = jwt.verify(token, jwtSecret) as {
+        id: string;
+        email: string;
+        role: UserRole;
+        name?: string;
+      };
+
+      const user = await User.findById(decoded.id);
+      if (user && user.isActive) {
+        (req as AuthRequest).user = {
+          id: decoded.id,
+          email: decoded.email,
+          role: decoded.role,
+          name: user.name
+        } as any;
+      }
+    }
+
+    next();
+  } catch (error) {
+    // Continue without authentication
+    next();
+  }
+};
