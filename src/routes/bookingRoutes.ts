@@ -160,17 +160,17 @@ router.post('/', authenticate, isGuest, async (req, res) => {
     const adultsNum = Number(adults);
     const childrenNum = Number(children) || 0;
 
-    if (adultsNum < 1 || adultsNum > 4) {
+    if (adultsNum < 1) {
       return res.status(400).json({
         success: false,
-        message: 'Adults must be between 1 and 4',
+        message: 'At least 1 adult is required',
       });
     }
 
-    if (childrenNum < 0 || childrenNum > 2) {
+    if (childrenNum < 0) {
       return res.status(400).json({
         success: false,
-        message: 'Children must be between 0 and 2',
+        message: 'Children cannot be negative',
       });
     }
 
@@ -187,6 +187,30 @@ router.post('/', authenticate, isGuest, async (req, res) => {
       return res.status(400).json({
         success: false,
         message: 'Room is not available for booking',
+      });
+    }
+
+    // Validate capacity - use maxAdults and maxChildren if available, otherwise parse capacity string
+    let maxAdults = room.specs.maxAdults || 2;
+    let maxChildren = room.specs.maxChildren || 2;
+    
+    // Fallback to parsing capacity string if new fields not set
+    if (!room.specs.maxAdults) {
+      const capacityMatch = room.specs.capacity.match(/(\d+)/);
+      maxAdults = capacityMatch ? parseInt(capacityMatch[1]) : 2;
+    }
+    
+    if (adultsNum > maxAdults) {
+      return res.status(400).json({
+        success: false,
+        message: `Too many adults. This room can accommodate maximum ${maxAdults} adult${maxAdults > 1 ? 's' : ''} (you selected ${adultsNum}).`,
+      });
+    }
+    
+    if (childrenNum > maxChildren) {
+      return res.status(400).json({
+        success: false,
+        message: `Too many children. This room can accommodate maximum ${maxChildren} child${maxChildren !== 1 ? 'ren' : ''} (you selected ${childrenNum}).`,
       });
     }
 
@@ -343,10 +367,10 @@ router.patch('/:id/status', authenticate, isStaff, async (req, res) => {
       });
     }
 
-    if (!['pending', 'confirmed', 'cancelled'].includes(status)) {
+    if (!['pending', 'confirmed', 'checked-in', 'checked-out', 'cancelled'].includes(status)) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid status. Must be: pending, confirmed, or cancelled',
+        message: 'Invalid status. Must be: pending, confirmed, checked-in, checked-out, or cancelled',
       });
     }
 
@@ -372,6 +396,64 @@ router.patch('/:id/status', authenticate, isStaff, async (req, res) => {
     res.status(400).json({
       success: false,
       message: 'Error updating booking status',
+      error: error instanceof Error ? error.message : 'Unknown error',
+    });
+  }
+});
+
+// PATCH /api/bookings/:id/payment-status - Update payment status (staff and admin only)
+router.patch('/:id/payment-status', authenticate, isStaff, async (req, res) => {
+  try {
+    const { paymentStatus, paymentMethod } = req.body;
+
+    if (!paymentStatus) {
+      return res.status(400).json({
+        success: false,
+        message: 'Payment status is required',
+      });
+    }
+
+    if (!['pending', 'paid', 'refunded'].includes(paymentStatus)) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid payment status. Must be: pending, paid, or refunded',
+      });
+    }
+
+    if (paymentMethod && !['cash', 'online', 'card'].includes(paymentMethod)) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid payment method. Must be: cash, online, or card',
+      });
+    }
+
+    const updateData: any = { paymentStatus };
+    if (paymentMethod) {
+      updateData.paymentMethod = paymentMethod;
+    }
+
+    const booking = await Booking.findByIdAndUpdate(
+      req.params.id,
+      updateData,
+      { new: true, runValidators: true }
+    );
+
+    if (!booking) {
+      return res.status(404).json({
+        success: false,
+        message: 'Booking not found',
+      });
+    }
+
+    res.json({
+      success: true,
+      message: `Payment status updated to ${paymentStatus}`,
+      data: booking,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: 'Error updating payment status',
       error: error instanceof Error ? error.message : 'Unknown error',
     });
   }

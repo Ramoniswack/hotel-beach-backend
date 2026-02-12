@@ -204,3 +204,50 @@ export const addReply = async (req: Request, res: Response) => {
     res.status(500).json({ message: 'Error adding reply', error });
   }
 };
+
+export const deleteComment = async (req: Request, res: Response) => {
+  try {
+    const post = await BlogPost.findById(req.params.id);
+    if (!post) {
+      return res.status(404).json({ message: 'Blog post not found' });
+    }
+
+    const comment = (post.comments as any).id(req.params.commentId);
+    if (!comment) {
+      return res.status(404).json({ message: 'Comment not found' });
+    }
+
+    comment.deleteOne();
+    await post.save();
+    
+    res.json({ message: 'Comment deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Error deleting comment', error });
+  }
+};
+
+export const deleteReply = async (req: Request, res: Response) => {
+  try {
+    const post = await BlogPost.findById(req.params.id);
+    if (!post) {
+      return res.status(404).json({ message: 'Blog post not found' });
+    }
+
+    const comment = (post.comments as any).id(req.params.commentId);
+    if (!comment) {
+      return res.status(404).json({ message: 'Comment not found' });
+    }
+
+    const reply = (comment.replies as any).id(req.params.replyId);
+    if (!reply) {
+      return res.status(404).json({ message: 'Reply not found' });
+    }
+
+    reply.deleteOne();
+    await post.save();
+    
+    res.json({ message: 'Reply deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Error deleting reply', error });
+  }
+};

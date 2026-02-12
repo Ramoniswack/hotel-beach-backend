@@ -10,6 +10,8 @@ export interface IRoom extends Document {
   specs: {
     bed: string;
     capacity: string;
+    maxAdults: number;
+    maxChildren: number;
     size: string;
     view: string;
   };
@@ -42,6 +44,8 @@ const RoomSchema: Schema = new Schema(
     specs: {
       bed: { type: String, required: true },
       capacity: { type: String, required: true },
+      maxAdults: { type: Number, default: 2 },
+      maxChildren: { type: Number, default: 2 },
       size: { type: String, required: true },
       view: { type: String, required: true },
     },

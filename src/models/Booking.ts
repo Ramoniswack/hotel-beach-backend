@@ -20,6 +20,7 @@ export interface IBooking extends Document {
   }>;
   status: 'pending' | 'confirmed' | 'checked-in' | 'checked-out' | 'cancelled';
   paymentStatus: 'pending' | 'paid' | 'refunded';
+  paymentMethod?: 'cash' | 'online' | 'card';
   invoiceNumber?: string;
   specialRequests?: string;
   createdAt: Date;
@@ -32,8 +33,8 @@ const BookingSchema: Schema = new Schema(
     roomTitle: { type: String, required: true },
     checkInDate: { type: Date, required: true },
     checkOutDate: { type: Date, required: true },
-    adults: { type: Number, required: true, min: 1, max: 4 },
-    children: { type: Number, required: true, min: 0, max: 2 },
+    adults: { type: Number, required: true, min: 1 },
+    children: { type: Number, required: true, min: 0 },
     totalPrice: { type: Number, required: true },
     guestInfo: {
       name: { type: String, required: true },
@@ -54,6 +55,10 @@ const BookingSchema: Schema = new Schema(
       type: String,
       enum: ['pending', 'paid', 'refunded'],
       default: 'pending',
+    },
+    paymentMethod: {
+      type: String,
+      enum: ['cash', 'online', 'card'],
     },
     invoiceNumber: { type: String },
     specialRequests: { type: String },

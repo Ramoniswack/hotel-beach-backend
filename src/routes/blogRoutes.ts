@@ -10,7 +10,9 @@ import {
   addComment,
   getComments,
   likeComment,
-  addReply
+  addReply,
+  deleteComment,
+  deleteReply
 } from '../controllers/blogController';
 
 const router = express.Router();
@@ -26,5 +28,9 @@ router.post('/:slug/comments', optionalAuth, addComment);
 router.get('/:slug/comments', getComments);
 router.post('/:slug/comments/:commentId/like', authenticate, likeComment);
 router.post('/:slug/comments/:commentId/reply', optionalAuth, addReply);
+
+// Admin comment management routes
+router.delete('/:id/comments/:commentId', authenticate, authorize([UserRole.ADMIN, UserRole.STAFF]), deleteComment);
+router.delete('/:id/comments/:commentId/replies/:replyId', authenticate, authorize([UserRole.ADMIN, UserRole.STAFF]), deleteReply);
 
 export default router;
