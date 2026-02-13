@@ -11,6 +11,7 @@ import googleAuthRoutes from './routes/googleAuthRoutes';
 import themeRoutes from './routes/themeRoutes';
 import blogRoutes from './routes/blogRoutes';
 import uploadRoutes from './routes/uploadRoutes';
+import contactSettingsRoutes from './routes/contactSettingsRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -46,6 +47,7 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/content', themeRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/contact-settings', contactSettingsRoutes);
 
 // Health check
 app.get('/api/health', (_req: Request, res: Response) => {
