@@ -278,6 +278,36 @@ router.post('/', authenticate, isGuest, async (req, res) => {
   }
 });
 
+// GET /api/bookings/my-bookings - Get current user's bookings (authenticated guests)
+router.get('/my-bookings', authenticate, isGuest, async (req, res) => {
+  try {
+    const userEmail = (req as any).user?.email;
+    
+    if (!userEmail) {
+      return res.status(401).json({
+        success: false,
+        message: 'User email not found',
+      });
+    }
+
+    const bookings = await Booking.find({
+      'guestInfo.email': userEmail.toLowerCase().trim(),
+    }).sort({ createdAt: -1 });
+
+    res.json({
+      success: true,
+      count: bookings.length,
+      data: bookings,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Error fetching bookings',
+      error: error instanceof Error ? error.message : 'Unknown error',
+    });
+  }
+});
+
 // GET /api/bookings - Get all bookings (staff and admin only)
 router.get('/', authenticate, isStaff, async (req, res) => {
   try {
