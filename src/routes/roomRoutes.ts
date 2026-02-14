@@ -108,7 +108,12 @@ router.get('/available', async (req, res) => {
 // GET /api/rooms/:id - Fetch single room by ID/slug (public)
 router.get('/:id', async (req, res) => {
   try {
-    const room = await Room.findOne({ id: req.params.id });
+    // Try to find by MongoDB _id first, then by custom id (slug)
+    let room = await Room.findById(req.params.id).catch(() => null);
+    
+    if (!room) {
+      room = await Room.findOne({ id: req.params.id });
+    }
     
     if (!room) {
       return res.status(404).json({
