@@ -59,10 +59,10 @@ router.post('/check-availability', async (req, res) => {
       });
     }
 
-    // Check for overlapping bookings
+    // Check for overlapping bookings (only confirmed bookings block availability)
     const overlappingBookings = await Booking.find({
       roomId,
-      status: { $ne: 'cancelled' },
+      status: { $in: ['confirmed', 'checked-in', 'checked-out'] },
       $or: [
         {
           checkInDate: { $lte: checkOut },
@@ -101,6 +101,7 @@ router.post('/check-availability', async (req, res) => {
 router.post('/', authenticate, isGuest, async (req, res) => {
   try {
     const { roomId, checkInDate, checkOutDate, adults, children, guestInfo } = req.body;
+    const userId = (req as any).user?._id; // Get authenticated user ID
 
     // Validate required fields
     if (!roomId || !checkInDate || !checkOutDate || !adults || !guestInfo) {
@@ -215,9 +216,10 @@ router.post('/', authenticate, isGuest, async (req, res) => {
     }
 
     // RE-CHECK AVAILABILITY at the moment of booking to prevent double-booking
+    // Only confirmed bookings block availability (pending bookings don't reserve the room)
     const overlappingBookings = await Booking.find({
       roomId,
-      status: { $ne: 'cancelled' },
+      status: { $in: ['confirmed', 'checked-in', 'checked-out'] },
       $or: [
         {
           checkInDate: { $lte: checkOut },
@@ -241,6 +243,7 @@ router.post('/', authenticate, isGuest, async (req, res) => {
     const booking = new Booking({
       roomId,
       roomTitle: room.title,
+      userId, // Store user reference for registered users
       checkInDate: checkIn,
       checkOutDate: checkOut,
       adults: adultsNum,
@@ -311,7 +314,10 @@ router.get('/my-bookings', authenticate, isGuest, async (req, res) => {
 // GET /api/bookings - Get all bookings (staff and admin only)
 router.get('/', authenticate, isStaff, async (req, res) => {
   try {
-    const bookings = await Booking.find().sort({ createdAt: -1 });
+    const bookings = await Booking.find()
+      .populate('userId', 'name email role') // Populate user details
+      .sort({ createdAt: -1 });
+    
     res.json({
       success: true,
       count: bookings.length,
@@ -363,7 +369,8 @@ router.get('/user/:email', authenticate, async (req, res) => {
 // GET /api/bookings/:id - Get booking by ID (authenticated)
 router.get('/:id', authenticate, async (req, res) => {
   try {
-    const booking = await Booking.findById(req.params.id);
+    const booking = await Booking.findById(req.params.id)
+      .populate('userId', 'name email role'); // Populate user details
     
     if (!booking) {
       return res.status(404).json({

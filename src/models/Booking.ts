@@ -1,8 +1,9 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IBooking extends Document {
-  roomId: string;
-  roomTitle: string;
+  roomId: mongoose.Types.ObjectId | string;
+  roomTitle: string; // Kept for backward compatibility and performance
+  userId?: mongoose.Types.ObjectId; // Reference to User (for registered users)
   checkInDate: Date;
   checkOutDate: Date;
   adults: number;
@@ -29,8 +30,9 @@ export interface IBooking extends Document {
 
 const BookingSchema: Schema = new Schema(
   {
-    roomId: { type: String, required: true },
+    roomId: { type: String, required: true }, // Keep as String for compatibility with Room.id field
     roomTitle: { type: String, required: true },
+    userId: { type: Schema.Types.ObjectId, ref: 'User' }, // Optional reference to User
     checkInDate: { type: Date, required: true },
     checkOutDate: { type: Date, required: true },
     adults: { type: Number, required: true, min: 1 },
