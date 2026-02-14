@@ -3,26 +3,45 @@ import cloudinary from '../config/cloudinary';
 
 export const uploadSingle = async (req: Request, res: Response) => {
   try {
-    console.log('Upload request received');
+    console.log('=== Upload Request Debug ===');
+    console.log('Headers:', req.headers);
+    console.log('User:', (req as any).user);
     console.log('File:', req.file);
+    console.log('Body:', req.body);
     
     if (!req.file) {
-      return res.status(400).json({ message: 'No file uploaded' });
+      console.error('No file in request');
+      return res.status(400).json({ 
+        success: false,
+        message: 'No file uploaded',
+        debug: {
+          hasFile: !!req.file,
+          contentType: req.headers['content-type']
+        }
+      });
     }
 
     console.log('File uploaded successfully:', req.file.path);
     
     res.json({
       success: true,
+      message: 'Image uploaded successfully',
       url: req.file.path,
-      publicId: (req.file as any).filename
+      publicId: (req.file as any).filename,
+      data: {
+        url: req.file.path,
+        publicId: (req.file as any).filename
+      }
     });
   } catch (error: any) {
-    console.error('Upload error:', error);
+    console.error('=== Upload Error ===');
+    console.error('Error:', error);
+    console.error('Stack:', error.stack);
     res.status(500).json({ 
+      success: false,
       message: 'Error uploading file', 
       error: error.message,
-      stack: error.stack 
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 };

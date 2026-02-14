@@ -6,6 +6,7 @@ import User, { UserRole } from '../models/User';
 export interface AuthRequest extends Request {
   user?: {
     id: string;
+    userId: string; // Add userId alias for compatibility
     email: string;
     role: UserRole;
     name?: string;
@@ -51,6 +52,7 @@ export const authenticate = async (
     // Attach user to request
     (req as AuthRequest).user = {
       id: decoded.id,
+      userId: decoded.id, // Add userId alias
       email: decoded.email,
       role: decoded.role,
     };

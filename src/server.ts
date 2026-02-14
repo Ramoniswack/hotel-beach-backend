@@ -12,6 +12,7 @@ import themeRoutes from './routes/themeRoutes';
 import blogRoutes from './routes/blogRoutes';
 import uploadRoutes from './routes/uploadRoutes';
 import contactSettingsRoutes from './routes/contactSettingsRoutes';
+import expenseRoutes from './routes/expenseRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -48,6 +49,7 @@ app.use('/api/content', themeRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/contact-settings', contactSettingsRoutes);
+app.use('/api/expenses', expenseRoutes);
 
 // Health check
 app.get('/api/health', (_req: Request, res: Response) => {
@@ -57,6 +59,31 @@ app.get('/api/health', (_req: Request, res: Response) => {
 // 404 handler
 app.use((_req: Request, res: Response) => {
   res.status(404).json({ message: 'Route not found' });
+});
+
+// Error handler for multer and other errors
+app.use((err: any, req: Request, res: Response, next: any) => {
+  console.error('=== Server Error ===');
+  console.error('Error:', err);
+  
+  if (err.name === 'MulterError') {
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      return res.status(400).json({
+        success: false,
+        message: 'File size too large. Maximum size is 5MB',
+      });
+    }
+    return res.status(400).json({
+      success: false,
+      message: `Upload error: ${err.message}`,
+    });
+  }
+  
+  res.status(err.status || 500).json({
+    success: false,
+    message: err.message || 'Internal server error',
+    error: process.env.NODE_ENV === 'development' ? err.stack : undefined,
+  });
 });
 
 // Start server
