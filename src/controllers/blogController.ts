@@ -15,7 +15,13 @@ export const getAllPosts = async (req: Request, res: Response) => {
 
 export const getPostBySlug = async (req: Request, res: Response) => {
   try {
-    const post = await BlogPost.findOne({ slug: req.params.slug });
+    // Try to find by MongoDB _id first, then by slug
+    let post = await BlogPost.findById(req.params.slug).catch(() => null);
+    
+    if (!post) {
+      post = await BlogPost.findOne({ slug: req.params.slug });
+    }
+    
     if (!post) {
       return res.status(404).json({ message: 'Blog post not found' });
     }
