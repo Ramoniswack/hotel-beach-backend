@@ -1,0 +1,88 @@
+[
+  {
+    "_id": "698997e81e4092f3439fea21",
+    "email": "mr.bishal.baniya@gmail.com",
+    "role": "staff",
+    "name": "bishal Baniya",
+    "phone": "",
+    "isActive": false,
+    "createdAt": "2026-02-09T08:16:40.062Z",
+    "updatedAt": "2026-02-11T07:44:12.219Z",
+    "__v": 0,
+    "authProvider": "google",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLhFPSigbaPZS2lW1Rm4fb7rVKf_quxUx9mJ4_geNjxucP2n4VcuA=s96-c",
+    "googleId": "116054450766231478675"
+  },
+  {
+    "_id": "698998301e4092f3439fea33",
+    "email": "bishal@bishal.bishal",
+    "role": "admin",
+    "name": "bishal baniya",
+    "phone": "",
+    "isActive": true,
+    "createdAt": "2026-02-09T08:17:52.320Z",
+    "updatedAt": "2026-02-09T11:50:23.366Z",
+    "__v": 0
+  },
+  {
+    "_id": "6989985f7921f7d99a08eddb",
+    "email": "admin@hotel.com",
+    "role": "admin",
+    "name": "Admin User",
+    "isActive": true,
+    "createdAt": "2026-02-09T08:18:39.096Z",
+    "updatedAt": "2026-02-09T08:18:39.096Z",
+    "__v": 0
+  },
+  {
+    "_id": "6989985f7921f7d99a08eddd",
+    "email": "staff@hotel.com",
+    "role": "staff",
+    "name": "Staff User",
+    "isActive": true,
+    "createdAt": "2026-02-09T08:18:39.350Z",
+    "updatedAt": "2026-02-09T08:18:39.350Z",
+    "__v": 0
+  },
+  {
+    "_id": "6989985f7921f7d99a08eddf",
+    "email": "guest@hotel.com",
+    "role": "guest",
+    "name": "Guest User",
+    "isActive": true,
+    "createdAt": "2026-02-09T08:18:39.584Z",
+    "updatedAt": "2026-02-09T08:18:39.584Z",
+    "__v": 0
+  },
+  {
+    "_id": "698c3f6b2ae13c5d3157e761",
+    "email": "aman@aman.aman",
+    "role": "guest",
+    "name": "aman baniya",
+    "phone": "aman",
+    "isActive": true,
+    "authProvider": "local",
+    "createdAt": "2026-02-11T08:35:55.472Z",
+    "updatedAt": "2026-02-13T16:14:03.815Z",
+    "__v": 0,
+    "billingInfo": {
+      "country": "va",
+      "address": "New Baneshwor",
+      "city": "Kathmandnu",
+      "state": "dcvfbgv",
+      "postcode": "44600"
+    }
+  },
+  {
+    "_id": "698cbd5ebe5a91e63560f62d",
+    "email": "sonik@sonik.sonik",
+    "role": "guest",
+    "name": "sonik lamsal",
+    "phone": "",
+    "isActive": true,
+    "authProvider": "local",
+    "createdAt": "2026-02-11T17:33:18.387Z",
+    "updatedAt": "2026-02-11T17:33:18.387Z",
+    "__v": 0
+  }
+]

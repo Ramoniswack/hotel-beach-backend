@@ -5,3 +5,5 @@ dist
 README.md
 /doc
 /scripts
+dump/*.json
+!dump/README.md

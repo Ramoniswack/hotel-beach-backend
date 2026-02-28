@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "6990c0165d25642734414ed9",
+    "category": "utilities",
+    "subcategory": "ele",
+    "amount": 10,
+    "description": "c",
+    "date": "2026-02-14T00:00:00.000Z",
+    "paymentMethod": "cash",
+    "vendor": "s",
+    "receiptUrl": "https://res.cloudinary.com/ddiptfgrs/image/upload/v1771094034/hotel-uploads/k11yqqacvzxzyk9ocsvl.jpg",
+    "status": "approved",
+    "notes": "c",
+    "createdBy": "6989985f7921f7d99a08eddb",
+    "createdAt": "2026-02-14T18:33:58.288Z",
+    "updatedAt": "2026-02-14T18:36:09.970Z",
+    "__v": 0,
+    "approvedBy": "6989985f7921f7d99a08eddb"
+  },
+  {
+    "_id": "6990c0465d25642734414ef3",
+    "category": "utilities",
+    "subcategory": "dd",
+    "amount": 1000,
+    "description": "dc",
+    "date": "2026-02-14T00:00:00.000Z",
+    "paymentMethod": "cash",
+    "vendor": "cedc",
+    "status": "approved",
+    "notes": "cd",
+    "createdBy": "6989985f7921f7d99a08eddb",
+    "createdAt": "2026-02-14T18:34:46.649Z",
+    "updatedAt": "2026-02-14T18:36:13.132Z",
+    "__v": 0,
+    "approvedBy": "6989985f7921f7d99a08eddb"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "exportDate": "2026-02-15T16:27:05.646Z",
+  "database": "cluster0.wz2vvvr.mongodb.net",
+  "collections": {
+    "users": 8,
+    "rooms": 4,
+    "bookings": 16,
+    "themes": 7,
+    "blogPosts": 8,
+    "contactSettings": 0,
+    "expenses": 2
+  },
+  "totalDocuments": 45
+}

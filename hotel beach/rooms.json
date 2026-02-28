@@ -1,0 +1,217 @@
+[
+  {
+    "_id": "698c3fa71180b57d9ac38b16",
+    "id": "superior-room",
+    "title": "Superior Room",
+    "subtitle": "Great for business trip",
+    "price": 199,
+    "heroImage": "https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&q=80&w=1920",
+    "description": [
+      "Great choice for a relaxing vacation for families with children or a group of friends.",
+      "Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum.",
+      "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrast colour contour stunning silhouette working peplum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel molestie nisl. Duis ac mi leo. Mauris at convallis erat."
+    ],
+    "specs": {
+      "bed": "Twins Bed",
+      "capacity": "2 Adults 1 Children",
+      "maxAdults": 2,
+      "maxChildren": 1,
+      "size": "30m²",
+      "view": "Sea view"
+    },
+    "gallery": [
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832052/hotel-uploads/lklx1ldy9vrrp37mmkvq.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832059/hotel-uploads/yjwocigyjg115lp44fqu.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832075/hotel-uploads/q5nilhquqcrwvc1apl1d.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832087/hotel-uploads/nil9cgw7ly78rfv2u00b.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832095/hotel-uploads/o9lusemimtps0cbxbi2b.jpg"
+    ],
+    "amenities": [
+      "40-inch Samsung® LED TV",
+      "Electronic safe with charging facility",
+      "iHome™ Bluetooth MP3 Player",
+      "Iron and ironing board",
+      "Mini bar",
+      "Non-smoking",
+      "USB charging station",
+      "Wired and wireless broadband Internet access",
+      "Work desk"
+    ],
+    "services": [
+      "Free-to-use smartphone (Free)",
+      "Safe-deposit box (Free)",
+      "Luggage storage (Free)",
+      "Childcare ($60 / Once / Per Accommodation)",
+      "Massage ($15 / Once / Per Guest)"
+    ],
+    "isAvailable": true,
+    "cleaningStatus": "clean",
+    "occupancyStatus": "vacant",
+    "seasonalPricing": [],
+    "__v": 1,
+    "createdAt": "2026-02-11T08:36:55.849Z",
+    "updatedAt": "2026-02-12T15:37:13.437Z"
+  },
+  {
+    "_id": "698c3fa71180b57d9ac38b17",
+    "id": "deluxe-room",
+    "title": "Deluxe Room",
+    "subtitle": "Great for business trip",
+    "price": 249,
+    "heroImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=1920",
+    "description": [
+      "Great choice for a relaxing vacation for families with children or a group of friends.",
+      "Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum.",
+      "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrast colour contour stunning silhouette working peplum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel molestie nisl. Duis ac mi leo. Mauris at convallis erat."
+    ],
+    "specs": {
+      "bed": "King Bed",
+      "capacity": "3 Adults 1 Children",
+      "maxAdults": 3,
+      "maxChildren": 1,
+      "size": "55m²",
+      "view": "Sea view"
+    },
+    "gallery": [
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832315/hotel-uploads/h58xph4v0kfgybqxthrd.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832321/hotel-uploads/irp0tj1mrfkq0pnym2ud.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832326/hotel-uploads/siuwhvnvallfrs3f90ix.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832331/hotel-uploads/kh93714gyidokro7v48n.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832336/hotel-uploads/zlp3j62sqzelswdirp5t.jpg"
+    ],
+    "amenities": [
+      "40-inch Samsung® LED TV",
+      "Electronic safe with charging facility",
+      "iHome™ Bluetooth MP3 Player",
+      "Iron and ironing board",
+      "Mini bar",
+      "Non-smoking",
+      "USB charging station",
+      "Wired and wireless broadband Internet access",
+      "Work desk"
+    ],
+    "services": [
+      "Free-to-use smartphone (Free)",
+      "Safe-deposit box (Free)",
+      "Luggage storage (Free)",
+      "Childcare ($60 / Once / Per Accommodation)",
+      "Massage ($15 / Once / Per Guest)"
+    ],
+    "isAvailable": true,
+    "cleaningStatus": "clean",
+    "occupancyStatus": "vacant",
+    "seasonalPricing": [],
+    "__v": 1,
+    "createdAt": "2026-02-11T08:36:55.854Z",
+    "updatedAt": "2026-02-12T15:38:44.140Z"
+  },
+  {
+    "_id": "698c3fa71180b57d9ac38b18",
+    "id": "signature-room",
+    "title": "Signature Room",
+    "subtitle": "Great for families",
+    "price": 299,
+    "heroImage": "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1920",
+    "description": [
+      "Great choice for a relaxing vacation for families with children or a group of friends.",
+      "Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum.",
+      "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrast colour contour stunning silhouette working peplum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel molestie nisl. Duis ac mi leo. Mauris at convallis erat."
+    ],
+    "specs": {
+      "bed": "King Bed",
+      "capacity": "3 Adults 2 Children",
+      "maxAdults": 3,
+      "maxChildren": 2,
+      "size": "70m²",
+      "view": "Sea view"
+    },
+    "gallery": [
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832450/hotel-uploads/e9kzi4z3xw8xejy3kvhw.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832463/hotel-uploads/loxqfmxk8z9idarakfoa.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832468/hotel-uploads/o0cspeoctcq1o0bxpfj6.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832489/hotel-uploads/jm0unknkuocie56zhrrb.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832494/hotel-uploads/qnrbritfc3e1iyxii5ty.jpg"
+    ],
+    "amenities": [
+      "40-inch Samsung® LED TV",
+      "Electronic safe with charging facility",
+      "iHome™ Bluetooth MP3 Player",
+      "Iron and ironing board",
+      "Mini bar",
+      "Non-smoking",
+      "USB charging station",
+      "Wired and wireless broadband Internet access",
+      "Work desk"
+    ],
+    "services": [
+      "Free-to-use smartphone (Free)",
+      "Safe-deposit box (Free)",
+      "Luggage storage (Free)",
+      "Childcare ($60 / Once / Per Accommodation)",
+      "Massage ($15 / Once / Per Guest)"
+    ],
+    "isAvailable": true,
+    "cleaningStatus": "clean",
+    "occupancyStatus": "vacant",
+    "seasonalPricing": [],
+    "__v": 1,
+    "createdAt": "2026-02-11T08:36:55.855Z",
+    "updatedAt": "2026-02-12T15:39:27.773Z"
+  },
+  {
+    "_id": "698dfdbce8da718f1674f10e",
+    "id": "luxury-suite-room",
+    "title": "Luxury suite room ",
+    "subtitle": "Great for business trip",
+    "price": 399,
+    "heroImage": "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770913124/hotel-uploads/eqry2tligzlzq4ilcbzg.jpg",
+    "description": [
+      "Great choice for a relaxing vacation for families with children or a group of friends.",
+      "Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum.",
+      "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrast colour contour stunning silhouette working peplum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel molestie nisl. Duis ac mi leo. Mauris at convallis erat."
+    ],
+    "specs": {
+      "bed": "Twins Bed",
+      "capacity": "4 Adults 1 Children",
+      "maxAdults": 4,
+      "maxChildren": 2,
+      "size": "250m",
+      "view": "sea view "
+    },
+    "gallery": [
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770913161/hotel-uploads/tsvfhhifcg84s0n5azdc.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770913171/hotel-uploads/y4yjsiperpxtw5pxpdim.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770913193/hotel-uploads/vsez4wrjgoadfpe4k57a.jpg",
+      "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770913205/hotel-uploads/asklrdumcjiccnzzdhzj.jpg"
+    ],
+    "amenities": [
+      "40-inch Samsung® LED TV",
+      "Electronic safe with charging facility",
+      "iHome™ Bluetooth MP3 Player",
+      "Iron and ironing board",
+      "Mini bar",
+      "Non-smoking",
+      "USB charging station",
+      "Wired and wireless broadband Internet access",
+      "Work desk"
+    ],
+    "services": [
+      "Free-to-use smartphone (Free)",
+      "Safe-deposit box (Free)",
+      "Luggage storage (Free)",
+      "Childcare ($60 / Once / Per Accommodation)",
+      "Massage ($15 / Once / Per Guest)"
+    ],
+    "isAvailable": true,
+    "cleaningStatus": "clean",
+    "occupancyStatus": "vacant",
+    "seasonalPricing": [],
+    "createdAt": "2026-02-12T16:20:12.178Z",
+    "updatedAt": "2026-02-12T16:36:28.465Z",
+    "__v": 0
+  }
+]

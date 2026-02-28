@@ -1,0 +1,879 @@
+[
+  {
+    "_id": "6989d2eb36e42084d66e69f4",
+    "pageName": "home",
+    "sections": [
+      {
+        "sectionId": "hero",
+        "sectionName": "Hero Section",
+        "title": "Santorini Retreat..",
+        "subtitle": "Unlock the door to a wonder of the world..",
+        "images": [
+          "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1920",
+          "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=1920",
+          "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=1920"
+        ],
+        "items": [
+          {
+            "title": "Santorini Retreat",
+            "subtitle": "Unlock the door to a wonder of the world...",
+            "image": "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770651372/hotel-uploads/wzc9xeoosu0yeq63nk0z.jpg"
+          },
+          {
+            "title": "Luxury Awaits",
+            "subtitle": "Experience the pinnacle of Mediterranean hospitality",
+            "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1920"
+          }
+        ],
+        "isVisible": true,
+        "order": 1,
+        "_id": "6989d2eb36e42084d66e69f5"
+      },
+      {
+        "sectionId": "intro",
+        "sectionName": "Introduction Section",
+        "title": "Beach Hotel More than a stay..",
+        "subtitle": "About Hoteller",
+        "description": "Pitchfork selfies master cleanse Kickstarter seitan retro. Drinking vinegar stumptown yr pop-up artisan sunt. Deep v cliche lomo biodiesel Neutra selfies. Shorts fixie consequat flexitarian four loko tempor duis single-origin coffee. Banksy, elit small batch freegan sed.",
+        "content": "Richard Morgan - General Manager",
+        "images": [
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832790/hotel-uploads/c9tzai4w2nncswiwgkdt.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832797/hotel-uploads/womfhjcdsnakuyth4prg.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770832811/hotel-uploads/y9kqp9rfaacieymudhm1.jpg"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 2,
+        "_id": "6989d2eb36e42084d66e69f6"
+      },
+      {
+        "sectionId": "deluxe-room",
+        "sectionName": "Deluxe Room Section",
+        "title": "Deluxe Room",
+        "subtitle": "Luxury Redefined",
+        "description": "Experience unparalleled comfort in our signature deluxe rooms",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 3,
+        "_id": "6989d2eb36e42084d66e69f7"
+      },
+      {
+        "sectionId": "chef-experience",
+        "sectionName": "Chef Experience Section",
+        "title": "Experience Deliciously from Our Chefs",
+        "subtitle": "5 STARS MICHALIN",
+        "description": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.",
+        "images": [
+          "https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=800",
+          "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 4,
+        "_id": "6989d2eb36e42084d66e69f8"
+      },
+      {
+        "sectionId": "retreat-spa",
+        "sectionName": "Retreat & Spa Section",
+        "title": "Visit Our fantastic villas",
+        "subtitle": "Wellness Sanctuary",
+        "description": "Featuring a pleasant blend of natural materials and elegance, the decor and furnishings create an inviting ambience fostering relaxation and a sense of well-being.",
+        "images": [
+          "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200"
+        ],
+        "buttonText": "Discover our rooms",
+        "buttonLink": "/rooms",
+        "items": [],
+        "isVisible": true,
+        "order": 5,
+        "_id": "6989d2eb36e42084d66e69f9"
+      },
+      {
+        "sectionId": "signature-designs",
+        "sectionName": "Signature Designs Section",
+        "title": "Signature, Simply Delicious",
+        "subtitle": "Architectural Excellence",
+        "description": "Awarded 14 Gault-Millau points, our cuisine focuses on locally sourced, seasonal ingredients.",
+        "images": [],
+        "buttonText": "Discover our restaurant",
+        "buttonLink": "#",
+        "items": [],
+        "isVisible": true,
+        "order": 6,
+        "_id": "6989d2eb36e42084d66e69fa"
+      },
+      {
+        "sectionId": "explore-santorini",
+        "sectionName": "Explore Santorini Section",
+        "title": "Explore Santorini Greece",
+        "subtitle": "Destination",
+        "description": "Pitchfork selfies master cleanse Kickstarter seitan retro. Drinking vinegar stumptown yr pop-up artisan sunt. Deep v cliche lomo biodiesel Neutra selfies. Shorts fixie consequat flexitarian four loko tempor duis single-origin coffee. Banksy, elit small batch freegan sed.",
+        "images": [
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770820635/hotel-uploads/qwrjo05egjbgu5jkxs3b.png",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770820644/hotel-uploads/utbvvamkk9qw1ge281sl.png"
+        ],
+        "buttonText": "Discover More",
+        "buttonLink": "/explore",
+        "items": [],
+        "isVisible": true,
+        "order": 7,
+        "_id": "6989d2eb36e42084d66e69fb"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "Beach Hotel - Luxury Santorini Resort",
+      "pageDescription": "Experience the ultimate luxury retreat in Santorini. Discover our world-class accommodations, dining, and spa facilities.",
+      "keywords": [
+        "santorini hotel",
+        "luxury resort",
+        "beach hotel",
+        "greece vacation"
+      ]
+    },
+    "createdAt": "2026-02-09T12:28:27.661Z",
+    "updatedAt": "2026-02-11T18:00:15.975Z",
+    "__v": 23
+  },
+  {
+    "_id": "6989d728bdd855461f67231e",
+    "pageName": "about",
+    "sections": [
+      {
+        "sectionId": "header",
+        "sectionName": "Page Header",
+        "title": "Retreat Hotel at Santorini",
+        "subtitle": "Unwind the clock of modern life. Unlock the door to a wonder of the world.",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 1,
+        "_id": "6989d728bdd855461f67231f"
+      },
+      {
+        "sectionId": "hero-image",
+        "sectionName": "Hero Image",
+        "images": [
+          "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=2000"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 2,
+        "_id": "6989d728bdd855461f672320"
+      },
+      {
+        "sectionId": "intro-text",
+        "sectionName": "Introduction Text",
+        "description": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et leggings fanny pack.",
+        "content": "RICARD MORGAN - GENERAL MANAGER",
+        "images": [
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770823588/hotel-uploads/kpjpu4byps3gmzmsqwsb.png"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 3,
+        "_id": "6989d728bdd855461f672321"
+      },
+      {
+        "sectionId": "gallery",
+        "sectionName": "Photo Gallery",
+        "images": [
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770823837/hotel-uploads/pbxkdwxtbphlb6olxam5.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770823843/hotel-uploads/ozezdkjycqv9qc0yoogi.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770823849/hotel-uploads/d0ulzyia5gmtvklj85b5.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770823855/hotel-uploads/zaaegojrmgdlogsukoul.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770823865/hotel-uploads/msfpe37hm6cleq6jdeue.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770991545/hotel-uploads/bd064vmpmpmkxodqb3np.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770991552/hotel-uploads/o5c3t33s5jjhaktc6cof.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770991567/hotel-uploads/av7wymuwqtnv8cm8mfwf.jpg",
+          "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770991578/hotel-uploads/eh6xxxchfl102djiksyk.jpg"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 4,
+        "_id": "6989d728bdd855461f672322"
+      },
+      {
+        "sectionId": "content-section",
+        "sectionName": "Content Section",
+        "title": "Everything Handy",
+        "images": [],
+        "items": [
+          {
+            "text": "Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean vinegar stumptown yr pop-up artisan."
+          },
+          {
+            "text": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrast colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket."
+          },
+          {
+            "text": "Effortless comfortable full leather lining eye-catching unique detail to the toe low 'cut-away' sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design."
+          }
+        ],
+        "isVisible": true,
+        "order": 5,
+        "_id": "6989d728bdd855461f672323"
+      },
+      {
+        "sectionId": "banner-image",
+        "sectionName": "Banner Image",
+        "images": [
+          "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80&w=2000"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 6,
+        "_id": "6989d728bdd855461f672324"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "About Us - Beach Hotel Santorini",
+      "pageDescription": "Discover the story behind our luxury retreat in Santorini. Experience Mediterranean hospitality at its finest.",
+      "keywords": [
+        "about us",
+        "santorini hotel",
+        "luxury retreat",
+        "hotel story"
+      ]
+    },
+    "createdAt": "2026-02-09T12:46:32.476Z",
+    "updatedAt": "2026-02-13T14:06:30.319Z",
+    "__v": 4
+  },
+  {
+    "_id": "6989dc7fe7f9eef7eaee87ef",
+    "pageName": "explore",
+    "sections": [
+      {
+        "sectionId": "header",
+        "sectionName": "Page Header",
+        "title": "Explore Santorini",
+        "subtitle": "Unwind the clock of modern life. Unlock the door to a wonder of the world.",
+        "description": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et leggings fanny pack, elit bespoke vinyl art party Pitchfork selfies master cleanse Kickstarter seitan retro.",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 1,
+        "_id": "6989dc7fe7f9eef7eaee87f0"
+      },
+      {
+        "sectionId": "hero-image",
+        "sectionName": "Hero Image",
+        "images": [
+          "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=1920"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 2,
+        "_id": "6989dc7fe7f9eef7eaee87f1"
+      },
+      {
+        "sectionId": "content",
+        "sectionName": "Main Content",
+        "description": "What to See and Do - Foam padding in the insoles leather finest quality staple flat slip-on design pointed toe off-duty shoe. Black knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design.",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 3,
+        "_id": "6989dc7fe7f9eef7eaee87f2"
+      },
+      {
+        "sectionId": "image-gallery",
+        "sectionName": "Image Gallery",
+        "images": [],
+        "items": [
+          {
+            "image": "https://images.unsplash.com/photo-1542662565-7e4b66bae529?auto=format&fit=crop&q=80&w=1200",
+            "caption": "City walk through the tunnel.",
+            "type": "vertical"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1200",
+            "caption": "Sea view of Santorini",
+            "type": "horizontal"
+          }
+        ],
+        "isVisible": true,
+        "order": 4,
+        "_id": "6989dc7fe7f9eef7eaee87f3"
+      },
+      {
+        "sectionId": "closing-text",
+        "sectionName": "Closing Text",
+        "description": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et leggings fanny pack, elit bespoke vinyl art party Pitchfork selfies master cleanse Kickstarter seitan retro. Drinking vinegar stumptown yr pop-up artisan sunt. Deep v cliche lomo biodiesel Neutra selfies. Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep.",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 5,
+        "_id": "6989dc7fe7f9eef7eaee87f4"
+      },
+      {
+        "sectionId": "our-rooms",
+        "sectionName": "Our Rooms Section",
+        "title": "Our Rooms",
+        "subtitle": "Could also be interest for you",
+        "images": [],
+        "items": [
+          {
+            "id": "superior-room",
+            "title": "Superior Room",
+            "image": "https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&q=80&w=800",
+            "size": "30",
+            "maxAdults": "2",
+            "maxChildren": "1",
+            "price": "$199",
+            "link": "/accommodation/superior-room"
+          },
+          {
+            "id": "deluxe-room",
+            "title": "Deluxe Room",
+            "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800",
+            "size": "55",
+            "maxAdults": "3",
+            "maxChildren": "1",
+            "price": "$249",
+            "link": "/accommodation/deluxe-room"
+          },
+          {
+            "id": "signature-room",
+            "title": "Signature Room",
+            "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800",
+            "size": "70",
+            "maxAdults": "3",
+            "maxChildren": "2",
+            "price": "$299",
+            "link": "/accommodation/signature-room"
+          },
+          {
+            "id": "luxury-suite",
+            "title": "Luxury Suite Room",
+            "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=800",
+            "size": "120",
+            "maxAdults": "4",
+            "maxChildren": "2",
+            "price": "$399",
+            "link": "/accommodation/luxury-suite"
+          }
+        ],
+        "isVisible": true,
+        "order": 6,
+        "_id": "6989dc7fe7f9eef7eaee87f5"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "Explore Santorini - Beach Hotel",
+      "pageDescription": "Discover the beauty of Santorini. Explore attractions, activities, and hidden gems of this stunning Greek island.",
+      "keywords": [
+        "santorini",
+        "explore",
+        "attractions",
+        "activities",
+        "greece"
+      ]
+    },
+    "createdAt": "2026-02-09T13:09:19.970Z",
+    "updatedAt": "2026-02-13T14:45:54.441Z",
+    "__v": 1
+  },
+  {
+    "_id": "6989ddf623ae76c23ed57cca",
+    "pageName": "contact",
+    "sections": [
+      {
+        "sectionId": "header",
+        "sectionName": "Page Header",
+        "title": "Located in center of Santorini, Greece",
+        "subtitle": "Unwind the clock of modern life. Unlock the door to a wonder of the world.",
+        "images": [],
+        "buttonText": "Get Direction",
+        "buttonLink": "https://maps.google.com",
+        "items": [],
+        "isVisible": true,
+        "order": 1,
+        "_id": "6989ddf723ae76c23ed57ccb"
+      },
+      {
+        "sectionId": "map",
+        "sectionName": "Map Section",
+        "description": "Shibuya",
+        "images": [
+          "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=2000"
+        ],
+        "items": [],
+        "isVisible": true,
+        "order": 2,
+        "_id": "6989ddf723ae76c23ed57ccc"
+      },
+      {
+        "sectionId": "info-columns",
+        "sectionName": "Information Columns",
+        "images": [],
+        "items": [
+          {
+            "title": "Our Address",
+            "content": "45 Santorini Station. Thira 150-0042 Greece\nrevs@hotellerbeach.com"
+          },
+          {
+            "title": "By Car",
+            "content": "Approximately 5 minutes from Santorini station. or 10 minutes from Thira station."
+          },
+          {
+            "title": "By Train",
+            "content": "7 minutes walk from St. Santorini Station. or 15 minutes walk from Thira Station."
+          }
+        ],
+        "isVisible": true,
+        "order": 3,
+        "_id": "6989ddf723ae76c23ed57ccd"
+      },
+      {
+        "sectionId": "contact-form",
+        "sectionName": "Contact Form",
+        "title": "Do you have any wishes or questions?",
+        "description": "I consent to Hoteller Hotel collecting my details through this form.",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 4,
+        "_id": "6989ddf723ae76c23ed57cce"
+      },
+      {
+        "sectionId": "contact-info",
+        "sectionName": "Contact Information Card",
+        "title": "Hoteller Beach Hotel",
+        "images": [],
+        "items": [
+          {
+            "type": "address",
+            "content": "45 Santorini Station\nThira 150-0042"
+          },
+          {
+            "type": "contact",
+            "content": "Tel.: +41 (0)54 2344 00\nFax: +41 (0)54 2344 99\nrevs@hotellerbeach.com"
+          }
+        ],
+        "isVisible": true,
+        "order": 5,
+        "_id": "6989ddf723ae76c23ed57ccf"
+      },
+      {
+        "sectionId": "social-media",
+        "sectionName": "Social Media Links",
+        "title": "Stay in touch with us",
+        "images": [],
+        "items": [
+          {
+            "platform": "facebook",
+            "url": "#",
+            "color": "#3b5998"
+          },
+          {
+            "platform": "twitter",
+            "url": "#",
+            "color": "#52c179"
+          },
+          {
+            "platform": "youtube",
+            "url": "#",
+            "color": "#e32d2d"
+          },
+          {
+            "platform": "instagram",
+            "url": "#",
+            "color": "#35465d"
+          }
+        ],
+        "isVisible": true,
+        "order": 6,
+        "_id": "6989ddf723ae76c23ed57cd0"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "Contact Us - Hoteller Beach Hotel",
+      "pageDescription": "Get in touch with Hoteller Beach Hotel. Located in the center of Santorini, Greece. Contact us for reservations and inquiries.",
+      "keywords": [
+        "contact",
+        "location",
+        "santorini",
+        "hotel",
+        "address",
+        "phone"
+      ]
+    },
+    "createdAt": "2026-02-09T13:15:35.024Z",
+    "updatedAt": "2026-02-11T16:04:42.135Z",
+    "__v": 1
+  },
+  {
+    "_id": "6989e381865ffa81856fa618",
+    "pageName": "site-settings",
+    "sections": [
+      {
+        "sectionId": "header",
+        "sectionName": "Header Settings",
+        "title": "HOTEL BEACH",
+        "subtitle": "Use text logo",
+        "images": [],
+        "items": [
+          {
+            "label": "Home",
+            "url": "/",
+            "order": 1
+          },
+          {
+            "label": "Our Rooms",
+            "url": "/rooms",
+            "order": 2
+          },
+          {
+            "label": "About Us",
+            "url": "/about",
+            "order": 3
+          },
+          {
+            "label": "Blog",
+            "url": "/blog",
+            "order": 4
+          },
+          {
+            "label": "Explore",
+            "url": "/explore",
+            "order": 5
+          },
+          {
+            "label": "Contact",
+            "url": "/contact",
+            "order": 6
+          }
+        ],
+        "isVisible": true,
+        "order": 1,
+        "_id": "6989e381865ffa81856fa619"
+      },
+      {
+        "sectionId": "footer",
+        "sectionName": "Footer Settings",
+        "images": [],
+        "items": [
+          {
+            "section": "address",
+            "title": "OUR ADDRESS",
+            "content": "Hoteller Beach Hotel\n45 Santorini Station\nThira 150-0042"
+          },
+          {
+            "section": "reservation",
+            "title": "RESERVATION",
+            "content": "Tel.: +41 054 2344 00\nFax: +41 054 2344 99\nrevs@hotellerbeach.com"
+          },
+          {
+            "section": "newsletter",
+            "title": "NEWSLETTER",
+            "content": "Subscribe to our newsletter"
+          },
+          {
+            "section": "awards",
+            "title": "AWARDS",
+            "images": [
+              "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770656796/hotel-uploads/lkxetamrd8k5eb8guq4h.png",
+              "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770656802/hotel-uploads/hr5okjw5xjgm23sc6phj.png"
+            ]
+          },
+          {
+            "section": "copyright",
+            "content": "© Copyright Hoteller Theme Demo - Theme by Bishal "
+          },
+          {
+            "section": "footer-links",
+            "links": [
+              {
+                "label": "Home",
+                "url": "/"
+              },
+              {
+                "label": "Our Rooms",
+                "url": "/rooms"
+              },
+              {
+                "label": "About Us",
+                "url": "/about"
+              },
+              {
+                "label": "Contact",
+                "url": "/contact"
+              },
+              {
+                "label": "Terms and Conditions",
+                "url": "#"
+              }
+            ]
+          }
+        ],
+        "isVisible": true,
+        "order": 2,
+        "_id": "6989e381865ffa81856fa61a"
+      },
+      {
+        "sectionId": "page-loader",
+        "sectionName": "Page Loader",
+        "title": "HOTEL",
+        "subtitle": "BEACH.",
+        "description": "#ffffff",
+        "content": "610",
+        "heroImage": "#5dbfc0",
+        "images": [
+          "water-fill"
+        ],
+        "buttonText": "100",
+        "items": [],
+        "isVisible": true,
+        "order": 3,
+        "_id": "698f184be2ad6c2ef602d510"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "Site Settings",
+      "pageDescription": "Global header and footer settings",
+      "keywords": [
+        "header",
+        "footer",
+        "navigation",
+        "settings"
+      ]
+    },
+    "createdAt": "2026-02-09T13:39:13.998Z",
+    "updatedAt": "2026-02-13T12:50:56.504Z",
+    "__v": 13
+  },
+  {
+    "_id": "698b4ab4081c6547bb2082cd",
+    "pageName": "rooms",
+    "sections": [
+      {
+        "sectionId": "retreat-hero",
+        "sectionName": "Retreat Hero Section",
+        "title": "Retreat Hotel at Santorini..",
+        "subtitle": "Unwind the clock of modern life. Unlock the door to a wonder of the world...",
+        "heroImage": "https://res.cloudinary.com/ddiptfgrs/image/upload/v1770736391/hotel-uploads/wo516hnbxjjzop3q3rjb.png",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 1,
+        "_id": "698b4831610d8a1e802b1a5f"
+      },
+      {
+        "sectionId": "header",
+        "sectionName": "Page Header",
+        "title": "In harmony with nature..",
+        "description": "Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum...",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 2,
+        "_id": "698b4831610d8a1e802b1a60"
+      },
+      {
+        "sectionId": "rooms-showcase",
+        "sectionName": "Rooms Showcase",
+        "title": "Our Rooms",
+        "description": "Browse our collection of luxury accommodations",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 3,
+        "_id": "698b4831610d8a1e802b1a61"
+      },
+      {
+        "sectionId": "spa-section",
+        "sectionName": "Spa Section",
+        "title": "Spa & Wellness",
+        "description": "Rejuvenate your body and mind",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 4,
+        "_id": "698b4831610d8a1e802b1a62"
+      },
+      {
+        "sectionId": "promotions",
+        "sectionName": "Promotions Grid",
+        "title": "Special Offers",
+        "description": "Check out our exclusive packages",
+        "images": [],
+        "items": [
+          {
+            "title": "2 Nights Getaway Promotion Package",
+            "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=800",
+            "link": "/promotions/getaway"
+          },
+          {
+            "title": "Free Breakfast for 3 days Package",
+            "image": "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&q=80&w=800",
+            "link": "/promotions/breakfast"
+          },
+          {
+            "title": "3 Nights Honeymoon Special Package",
+            "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=800",
+            "link": "/promotions/honeymoon"
+          }
+        ],
+        "isVisible": true,
+        "order": 5,
+        "_id": "698b4831610d8a1e802b1a63"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "Our Rooms - Beach Hotel Santorini",
+      "pageDescription": "Discover our luxury accommodations in Santorini. From deluxe rooms to premium suites, find your perfect stay.",
+      "keywords": [
+        "hotel rooms",
+        "santorini accommodation",
+        "luxury suites",
+        "beach hotel rooms"
+      ]
+    },
+    "createdAt": "2026-02-10T15:11:48.554Z",
+    "updatedAt": "2026-02-10T15:26:21.282Z",
+    "__v": 2
+  },
+  {
+    "_id": "698cabe5bfd3c7b5f84a6e9d",
+    "pageName": "booking-settings",
+    "sections": [
+      {
+        "sectionId": "check-times",
+        "sectionName": "Check-in/Check-out Times",
+        "title": "from 11:00 am",
+        "subtitle": "until 10:00 am",
+        "images": [],
+        "items": [],
+        "isVisible": true,
+        "order": 1,
+        "_id": "698cad01ca0b1a8459f3c66c"
+      },
+      {
+        "sectionId": "additional-services",
+        "sectionName": "Additional Services",
+        "title": "Choose Additional Services",
+        "images": [],
+        "items": [
+          {
+            "name": "Free-to-use smartphone",
+            "price": 0,
+            "priceLabel": "Free",
+            "type": "checkbox"
+          },
+          {
+            "name": "Safe-deposit box",
+            "price": 0,
+            "priceLabel": "Free",
+            "type": "checkbox"
+          },
+          {
+            "name": "Luggage storage",
+            "price": 0,
+            "priceLabel": "Free",
+            "type": "checkbox"
+          },
+          {
+            "name": "Childcare",
+            "price": 60,
+            "priceLabel": "$60 / Once",
+            "type": "checkbox"
+          },
+          {
+            "name": "Massage",
+            "price": 15,
+            "priceLabel": "$15 / Once",
+            "type": "guests",
+            "guestsLabel": "for"
+          }
+        ],
+        "isVisible": true,
+        "order": 2,
+        "_id": "698cad01ca0b1a8459f3c66d"
+      },
+      {
+        "sectionId": "policies",
+        "sectionName": "Booking Policies",
+        "images": [],
+        "items": [
+          {
+            "title": "Confirmations",
+            "content": "Confirmations that are received by email or fax will be processed and confirmed by our reservation office within 24 hours. A reservation is considered provisional until the hotel confirms acceptance of the reservation."
+          },
+          {
+            "title": "Cancellations",
+            "content": "Cancellations and changes must be done in writing (e.g. email or fax). A confirmed reservation can be cancelled or changed until 3 full days prior scheduled arrival date. In case of non-arrival on the day (no-show) or cancellation less than 3 full days prior to arrival, the amount of the first night will be charged."
+          }
+        ],
+        "isVisible": true,
+        "order": 3,
+        "_id": "698cad01ca0b1a8459f3c66e"
+      },
+      {
+        "sectionId": "sidebar-contact",
+        "sectionName": "Sidebar Contact Info",
+        "title": "Questions About Booking?",
+        "images": [],
+        "items": [
+          {
+            "label": "Tel",
+            "value": "+41 (0)54 2344 00"
+          },
+          {
+            "label": "Fax",
+            "value": "+41 (0)542344 99"
+          },
+          {
+            "label": "Email",
+            "value": "reservations@hoteliercity.com"
+          }
+        ],
+        "isVisible": true,
+        "order": 4,
+        "_id": "698cad01ca0b1a8459f3c66f"
+      },
+      {
+        "sectionId": "sidebar-address",
+        "sectionName": "Sidebar Address",
+        "title": "Our Address",
+        "images": [],
+        "items": [
+          {
+            "label": "Hotel Name",
+            "value": "Hotel Beach"
+          },
+          {
+            "label": "Address Line 1",
+            "value": "45 Santorini Beach"
+          },
+          {
+            "label": "Address Line 2",
+            "value": "Santorini 847 00"
+          },
+          {
+            "label": "Tel",
+            "value": "+41 (0)54 2344 00"
+          },
+          {
+            "label": "Fax",
+            "value": "+41 (0)542344 99"
+          },
+          {
+            "label": "Email",
+            "value": "reservations@hotelbeach.com"
+          }
+        ],
+        "isVisible": true,
+        "order": 5,
+        "_id": "698cad01ca0b1a8459f3c670"
+      }
+    ],
+    "metadata": {
+      "pageTitle": "Booking Confirmation Settings",
+      "pageDescription": "Manage booking confirmation page content"
+    },
+    "createdAt": "2026-02-11T16:18:45.766Z",
+    "updatedAt": "2026-02-11T16:23:29.553Z",
+    "__v": 1
+  }
+]
